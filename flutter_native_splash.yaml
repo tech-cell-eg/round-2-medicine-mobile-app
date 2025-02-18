@@ -1,0 +1,10 @@
+# flutter_native_splash:
+#   # Andriod & IOS below 12 "API Level 31" 
+#   color: "#4157FF"
+#   background_image: "assets/images/bg_splash.png"
+#   android: true
+#   ios: true
+
+#   android_12:
+    
+
