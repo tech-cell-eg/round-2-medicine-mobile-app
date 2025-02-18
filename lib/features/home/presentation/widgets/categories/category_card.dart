@@ -16,13 +16,16 @@ class CategoryCard extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         decoration: _buildDecoration(),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              width: 85,
-              height: 90,
-              decoration: BoxDecoration(
-                color: AppColors.primaryColor,
-                shape: BoxShape.circle,
+            Flexible(
+              child: Container(
+                width: 85,
+                height: 90,
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
+                  shape: BoxShape.circle,
+                ),
               ),
             ),
             verticalSpace(12.0),

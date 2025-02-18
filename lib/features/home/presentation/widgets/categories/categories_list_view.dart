@@ -12,6 +12,7 @@ class CategoriesListView extends StatelessWidget {
       height: context.screenHeight * 0.215,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
+        clipBehavior: Clip.none,
         padding: EdgeInsets.only(bottom: 8, left: 4, top: 8),
         itemBuilder: (_, index) => const CategoryCard(),
         itemCount: 4,
