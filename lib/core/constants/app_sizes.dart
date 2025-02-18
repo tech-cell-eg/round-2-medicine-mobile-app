@@ -10,4 +10,10 @@ class AppSizes {
   static double textFieldRaduis = 14.0;
 
     static const double appBarHeight = 56.0;
+
+  static const double spaceBtwnSections = 34.0;
+
+  static const double spaceBtwnItems = 18.0;
+
+  static const double spaceSectionItems = 14.0;
 }
