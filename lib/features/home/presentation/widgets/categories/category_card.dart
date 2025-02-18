@@ -54,7 +54,7 @@ class CategoryCard extends StatelessWidget {
           color: const Color(0xFFe9e9ee),
           spreadRadius: 3, //2
           blurRadius: 7, //7
-          offset: const Offset(3, 3),
+          offset: const Offset(3, 1),
         ),
       ],
     );
