@@ -7,5 +7,9 @@ class AppImages {
   static const String imagesLogoIcon = "assets/images/logo_icon.png";
 
   static const String imagesSplash = "assets/images/splash.png";
+  
+  static const String userAvatar = "assets/images/user.png";
+
+  static const String homeBanner = 'assets/images/home_banner.png';
 }
 
