@@ -28,7 +28,7 @@ class ProfileOptionsListView extends StatelessWidget {
             ),
         separatorBuilder:
             (_, index) => Padding(
-              padding: const EdgeInsets.only(left: 55.0),
+              padding: const EdgeInsets.only(left: 53.0),
               child: Divider(
                 thickness: 2,
                 height: 1.2,
