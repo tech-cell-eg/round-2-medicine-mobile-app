@@ -24,7 +24,11 @@ class CategoryScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppSizes.screenPadding),
+        padding: const EdgeInsets.only(
+          left: AppSizes.screenPadding,
+          right: AppSizes.screenPadding,
+          bottom: AppSizes.lg,
+        ),
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
