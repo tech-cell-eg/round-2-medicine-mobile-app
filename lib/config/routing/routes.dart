@@ -3,7 +3,7 @@ enum Routes {
   login,
   otp,
   home,
-  categoryProducts,
+  category,
   productDetails,
   cart,
   checkout,

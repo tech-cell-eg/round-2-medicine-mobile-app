@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/app_colors.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart'
     show AppTextStyles;
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -10,7 +12,9 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        context.push(Routes.category.name);
+      },
       borderRadius: BorderRadius.circular(70),
       child: Container(
         padding: const EdgeInsets.all(10),

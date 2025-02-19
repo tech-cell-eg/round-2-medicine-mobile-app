@@ -11,5 +11,7 @@ class AppImages {
   static const String userAvatar = "assets/images/user.png";
 
   static const String homeBanner = 'assets/images/home_banner.png';
+
+  static String productImage = 'assets/images/product_image.png';
 }
 
