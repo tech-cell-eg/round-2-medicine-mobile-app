@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/generated/app_icons.dart';
 import 'package:medical_store/core/shared/widgets/sections/section_heading.dart';
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 import 'package:medical_store/features/category/presentation/widgets/categories_list_view.dart';
 import 'package:medical_store/features/home/presentation/widgets/products/products_grid_view.dart';
@@ -14,9 +15,12 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: SvgPicture.asset(
-          AppIcons.arrowLeftIcon,
-          fit: BoxFit.scaleDown,
+        leading: GestureDetector(
+          onTap: () => context.pop(),
+          child: SvgPicture.asset(
+            AppIcons.arrowLeftIcon,
+            fit: BoxFit.scaleDown,
+          ),
         ),
       ),
       body: Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
+import 'package:medical_store/core/constants/generated/app_images.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
 class ProductCard extends StatelessWidget {
@@ -27,7 +28,7 @@ class ProductCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Image.asset(
-                  'assets/images/product_image.png',
+                  AppImages.productImage,
                   fit: BoxFit.contain,
                 ),
               ),
