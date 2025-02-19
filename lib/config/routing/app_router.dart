@@ -7,6 +7,7 @@ import 'package:medical_store/features/home/presentation/screens/home_screen.dar
 import 'package:medical_store/features/login/presentation/screens/login_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
+import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
 
 class AppRouter {
   static final Map<String, Widget Function(BuildContext)> _routes = {
@@ -19,7 +20,7 @@ class AppRouter {
     Routes.cart.name: (_) => const Placeholder(),
     Routes.checkout.name: (_) => const Placeholder(),
     Routes.notification.name: (_) => const Placeholder(),
-    Routes.profile.name: (_) => const Placeholder(),
+    Routes.profile.name: (_) => const ProfileScreen(),
   };
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {
