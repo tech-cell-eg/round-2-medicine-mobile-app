@@ -118,7 +118,16 @@ class AppTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.w400,
   );
-
+  static const style13W500 = TextStyle(
+    color: Color(0xFF1987FB),
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+  );
+  static const style13W400 = TextStyle(
+    color: Color.fromARGB(255, 179, 179, 179),
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+  );
   static const style16W400 = TextStyle(
     color: AppColors.subTitleColor,
     fontSize: 16,

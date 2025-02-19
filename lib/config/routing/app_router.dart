@@ -5,6 +5,7 @@ import 'package:medical_store/config/routing/routes.dart';
 // import 'package:medical_store/features/home/presentation/screens/home_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/login_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
+import 'package:medical_store/features/notification/notification_page.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
 
@@ -18,7 +19,7 @@ class AppRouter {
     Routes.productDetails.name: (_) => const ProductDetailsPage(),
     Routes.cart.name: (_) => const Placeholder(),
     Routes.checkout.name: (_) => const Placeholder(),
-    Routes.notification.name: (_) => const Placeholder(),
+    Routes.notification.name: (_) => const NotificationPage(),
     Routes.profile.name: (_) => const Placeholder(),
   };
 

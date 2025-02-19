@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.light,
         theme: AppTheme.lightTheme,
         navigatorObservers: [KeyboardDismissObserver()],
-        initialRoute: Routes.productDetails.name,
+        initialRoute: Routes.notification.name,
         onGenerateRoute: AppRouter.generateRoute,
       ),
     );
