@@ -17,9 +17,8 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.light,
         theme: AppTheme.lightTheme,
         navigatorObservers: [KeyboardDismissObserver()],
-        initialRoute: Routes.profile.name,
+        initialRoute: Routes.onboarding.name,
         onGenerateRoute: AppRouter.generateRoute,
-        
       ),
     );
   }

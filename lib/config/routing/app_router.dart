@@ -6,6 +6,7 @@ import 'package:medical_store/features/category/presentation/screens/category_sc
 import 'package:medical_store/features/home/presentation/screens/home_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/login_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
+import 'package:medical_store/features/navigation/navigation_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
 
@@ -21,6 +22,7 @@ class AppRouter {
     Routes.checkout.name: (_) => const Placeholder(),
     Routes.notification.name: (_) => const Placeholder(),
     Routes.profile.name: (_) => const ProfileScreen(),
+    Routes.navigation.name: (_) => const NavigationScreen(),
   };
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {

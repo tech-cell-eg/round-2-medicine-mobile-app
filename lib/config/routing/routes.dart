@@ -9,6 +9,7 @@ enum Routes {
   checkout,
   notification,
   profile,
+  navigation,
 }
 
 extension RoutesExtension on Routes {
