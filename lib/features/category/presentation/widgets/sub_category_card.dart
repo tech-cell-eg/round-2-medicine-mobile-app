@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/app_colors.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/generated/app_images.dart';
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
 class SubCategoryCard extends StatelessWidget {
@@ -10,7 +12,9 @@ class SubCategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        context.push(Routes.products.name);
+      },
       borderRadius: BorderRadius.circular(10),
       child: Container(
         padding: EdgeInsets.only(

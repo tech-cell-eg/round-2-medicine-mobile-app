@@ -8,6 +8,7 @@ import 'package:medical_store/features/login/presentation/screens/login_screen.d
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
 import 'package:medical_store/features/navigation/navigation_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
+import 'package:medical_store/features/products/presentation/screens/products_screen.dart';
 import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
 
 class AppRouter {
@@ -23,6 +24,7 @@ class AppRouter {
     Routes.notification.name: (_) => const Placeholder(),
     Routes.profile.name: (_) => const ProfileScreen(),
     Routes.navigation.name: (_) => const NavigationScreen(),
+    Routes.products.name: (_) => const ProductsScreen(),
   };
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {

@@ -10,6 +10,7 @@ enum Routes {
   notification,
   profile,
   navigation,
+  products,
 }
 
 extension RoutesExtension on Routes {
