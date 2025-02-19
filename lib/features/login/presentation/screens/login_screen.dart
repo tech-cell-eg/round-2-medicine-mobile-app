@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Phone Number',
+                hintText: '+201234567899',
               ),
             ),
             verticalSpace(36),
