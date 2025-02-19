@@ -2,6 +2,10 @@
 class AppIcons {
   AppIcons._();
   
+  static const String iconsAdd = "assets/icons/add.svg";
+
+  static const String iconsArrowLeftIcon = "assets/icons/arrow_left_icon.svg";
+
   static const String iconsBillingIcon = "assets/icons/billing_icon.svg";
 
   static const String iconsCartIcon = "assets/icons/cart_icon.svg";
@@ -21,6 +25,5 @@ class AppIcons {
   static const String iconsSearchIcon = "assets/icons/search_icon.svg";
 
   static const String iconsSuccessIcon = "assets/icons/success_icon.svg";
-  static const String arrowLeftIcon = "assets/icons/arrow_left_icon.svg";
 }
 

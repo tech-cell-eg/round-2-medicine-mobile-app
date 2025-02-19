@@ -9,5 +9,6 @@ class AppSizes {
 
   static double textFieldRaduis = 14.0;
 
-    static const double appBarHeight = 56.0;
+  static const double appBarHeight = 56.0;
+  static const double reduis = 10.0;
 }

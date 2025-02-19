@@ -6,7 +6,7 @@ import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/features/login/presentation/screens/login_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
-import 'package:medical_store/features/product_details/product_details_page.dart';
+import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
 
 class AppRouter {
   static final Map<String, Widget Function(BuildContext)> _routes = {
