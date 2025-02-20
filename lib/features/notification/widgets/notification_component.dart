@@ -23,6 +23,7 @@ class NotificationComponent extends StatelessWidget {
           ),
           leading: SvgPicture.asset(
             AppIcons.iconsNotification,
+            // ignore: deprecated_member_use
             color: Colors.black,
           ),
           title: Text(

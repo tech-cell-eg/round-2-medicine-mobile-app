@@ -14,7 +14,11 @@ class AppColors {
 
   static const colorf8 = Color(0xFFF8F8F8);
   static const colorF5 = Color(0xFFF5F5F5);
+  static const color00 = Color.fromARGB(74, 0, 0, 0);
   static const colorSelected = Color(0xFFFFA41B);
   static const starColor = Color(0xFFFFC000);
+  static const colorF2 = Color(0xFFF2F4FF);
+  static const colorDF = Color(0xFFDFE3FF);
+  static const colorA0 = Color(0xFFA0ABFF);
   static const dividerColor = Color.fromARGB(33, 0, 0, 0);
 }

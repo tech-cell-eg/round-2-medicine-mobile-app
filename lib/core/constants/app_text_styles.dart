@@ -113,6 +113,11 @@ class AppTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.w300,
   );
+  static const style14W600 = TextStyle(
+    color: AppColors.black,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+  );
   static const style14W400brime = TextStyle(
     color: AppColors.primaryColor,
     fontSize: 14,
