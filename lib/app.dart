@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
         navigatorObservers: [KeyboardDismissObserver()],
         initialRoute: Routes.onboarding.name,
         onGenerateRoute: AppRouter.generateRoute,
-        
       ),
     );
   }

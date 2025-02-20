@@ -8,7 +8,7 @@ class CustomInputDecorationTheme {
 
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 1,
-    contentPadding: const EdgeInsetsDirectional.symmetric(horizontal: 14.0),
+    contentPadding: const EdgeInsetsDirectional.symmetric(horizontal: 16.0,vertical: 15.0),
     labelStyle: AppTextStyles.inputDecorationTextStyle,
     hintStyle: AppTextStyles.inputDecorationTextStyle,
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
@@ -38,7 +38,7 @@ class CustomInputDecorationTheme {
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 1,
     isDense: true,
-    contentPadding: const EdgeInsetsDirectional.symmetric(horizontal: 14.0),
+    contentPadding: const EdgeInsetsDirectional.symmetric(horizontal: 16.0,vertical: 15.0),
     labelStyle: AppTextStyles.inputDecorationTextStyle,
     hintStyle: AppTextStyles.inputDecorationTextStyle,
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),

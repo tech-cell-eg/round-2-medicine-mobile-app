@@ -3,12 +3,15 @@ enum Routes {
   login,
   otp,
   home,
-  categoryProducts,
+  category,
   productDetails,
   cart,
   checkout,
   notification,
   profile,
+  navigation,
+  products,
+  thanks,
 }
 
 extension RoutesExtension on Routes {

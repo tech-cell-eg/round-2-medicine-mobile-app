@@ -1,12 +1,16 @@
-// ignore_for_file: prefer_single_quotes
 class AppIcons {
   AppIcons._();
-  
+
+  static const String iconsAdd = "assets/icons/add.svg";
+
+  static const String arrowLeftIcon = "assets/icons/arrow_left_icon.svg";
+
   static const String iconsBillingIcon = "assets/icons/billing_icon.svg";
 
   static const String iconsCartIcon = "assets/icons/cart_icon.svg";
 
-  static const String iconsEditProfileIcon = "assets/icons/edit_profile_icon.svg";
+  static const String iconsEditProfileIcon =
+      "assets/icons/edit_profile_icon.svg";
 
   static const String iconsFagIcon = "assets/icons/fag_icon.svg";
 
@@ -21,6 +25,4 @@ class AppIcons {
   static const String iconsSearchIcon = "assets/icons/search_icon.svg";
 
   static const String iconsSuccessIcon = "assets/icons/success_icon.svg";
-  static const String arrowLeftIcon = "assets/icons/arrow_left_icon.svg";
 }
-

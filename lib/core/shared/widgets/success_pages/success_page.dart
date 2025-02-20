@@ -53,7 +53,10 @@ class SuccessScreen extends StatelessWidget {
   SizedBox _continueButton(context) {
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(onPressed: onPressed, child: const Text('CONTINUE')),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        child: const Text('CONTINUE'),
+      ),
     );
   }
 }
