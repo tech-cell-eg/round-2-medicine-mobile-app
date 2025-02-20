@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:medical_store/core/constants/app_colors.dart';
 import 'package:medical_store/core/constants/app_strings.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
-import 'package:medical_store/features/your_card/widgets/count_component.dart';
+import 'package:medical_store/features/your_card/presentation/widgets/count_component.dart';
 
 class ItemComponent extends StatelessWidget {
   const ItemComponent({super.key});

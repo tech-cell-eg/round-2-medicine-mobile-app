@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_store/features/your_card/widgets/item_component.dart';
+import 'package:medical_store/features/your_card/presentation/widgets/item_component.dart';
 
 class CardItems extends StatelessWidget {
   const CardItems({super.key});

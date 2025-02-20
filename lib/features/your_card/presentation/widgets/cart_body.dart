@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medical_store/core/constants/app_colors.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
-import 'package:medical_store/features/your_card/widgets/cart_items.dart';
-import 'package:medical_store/features/your_card/widgets/payment_summary.dart';
+import 'package:medical_store/features/your_card/presentation/widgets/cart_items.dart';
+import 'package:medical_store/features/your_card/presentation/widgets/payment_summary.dart';
 
 class CardBody extends StatelessWidget {
   const CardBody({super.key});

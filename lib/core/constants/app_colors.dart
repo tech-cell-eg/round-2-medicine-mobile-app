@@ -20,5 +20,6 @@ class AppColors {
   static const colorF2 = Color(0xFFF2F4FF);
   static const colorDF = Color(0xFFDFE3FF);
   static const colorA0 = Color(0xFFA0ABFF);
+  static const color09 = Color.fromARGB(44, 9, 15, 71);
   static const dividerColor = Color.fromARGB(33, 0, 0, 0);
 }

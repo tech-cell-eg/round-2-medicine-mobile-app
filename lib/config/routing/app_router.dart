@@ -8,7 +8,9 @@ import 'package:medical_store/features/login/presentation/screens/otp_screen.dar
 import 'package:medical_store/features/notification/notification_page.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
-import 'package:medical_store/features/your_card/pages/cart_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/cart_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/checkout_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/thanks_page.dart';
 
 class AppRouter {
   static final Map<String, Widget Function(BuildContext)> _routes = {
@@ -19,9 +21,10 @@ class AppRouter {
     Routes.categoryProducts.name: (_) => const Placeholder(),
     Routes.productDetails.name: (_) => const ProductDetailsPage(),
     Routes.cart.name: (_) => const CartPage(),
-    Routes.checkout.name: (_) => const Placeholder(),
+    Routes.checkout.name: (_) => const CheckoutPage(),
     Routes.notification.name: (_) => const NotificationPage(),
     Routes.profile.name: (_) => const Placeholder(),
+    Routes.thanks.name: (_) => const ThanksPage(),
   };
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {
