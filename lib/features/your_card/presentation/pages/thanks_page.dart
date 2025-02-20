@@ -2,19 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
+import 'package:medical_store/core/constants/generated/app_icons.dart';
 import 'package:medical_store/core/utils/helpers/extensions/screen_utils.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
-class SuccessScreen extends StatelessWidget {
-  final String image, title, subtitle;
-  final VoidCallback? onPressed;
-  const SuccessScreen({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.subtitle,
-    this.onPressed,
-  });
+class ThanksPage extends StatelessWidget {
+  const ThanksPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +18,10 @@ class SuccessScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Spacer(),
-            SvgPicture.asset(image),
+            SvgPicture.asset(AppIcons.iconsSuccessIcon),
             verticalSpace(AppSizes.appBarHeight * 1.5),
             Text(
-              title,
+              "Thank you",
               style: AppTextStyles.style26W700,
               textAlign: TextAlign.center,
             ),
@@ -36,7 +29,7 @@ class SuccessScreen extends StatelessWidget {
             SizedBox(
               width: context.screenWidth * 0.72,
               child: Text(
-                subtitle,
+                "adasdaf asdf asd fasd lasdn sdkn",
                 style: AppTextStyles.style16W400,
                 textAlign: TextAlign.center,
               ),
@@ -54,7 +47,9 @@ class SuccessScreen extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: () {
+          Navigator.pop(context);
+        },
         child: const Text('CONTINUE'),
       ),
     );

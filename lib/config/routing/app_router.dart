@@ -10,12 +10,19 @@ import 'package:medical_store/features/navigation/navigation_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/products/presentation/screens/products_screen.dart';
 import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
+import 'package:medical_store/features/notification/notification_page.dart';
+import 'package:medical_store/features/onboarding/onboarding_screen.dart';
+import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/cart_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/checkout_page.dart';
+import 'package:medical_store/features/your_card/presentation/pages/thanks_page.dart';
 
 class AppRouter {
   static final Map<String, Widget Function(BuildContext)> _routes = {
     Routes.onboarding.name: (_) => const OnboardingScreen(),
     Routes.login.name: (_) => const LoginScreen(),
     Routes.otp.name: (_) => const OtpScreen(),
+
     Routes.home.name: (_) => const HomeScreen(),
     Routes.category.name: (_) => const CategoryScreen(),
     Routes.productDetails.name: (_) => const Placeholder(),
@@ -25,6 +32,16 @@ class AppRouter {
     Routes.profile.name: (_) => const ProfileScreen(),
     Routes.navigation.name: (_) => const NavigationScreen(),
     Routes.products.name: (_) => const ProductsScreen(),
+
+    // Routes.home.name: (_) => const HomeScreen(),
+    Routes.categoryProducts.name: (_) => const Placeholder(),
+    Routes.productDetails.name: (_) => const ProductDetailsPage(),
+    Routes.cart.name: (_) => const CartPage(),
+    Routes.checkout.name: (_) => const CheckoutPage(),
+    Routes.notification.name: (_) => const NotificationPage(),
+
+    Routes.profile.name: (_) => const Placeholder(),
+    Routes.thanks.name: (_) => const ThanksPage(),
   };
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {

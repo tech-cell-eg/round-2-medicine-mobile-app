@@ -28,6 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
+  cached_network_image: ^3.4.1
+
   cupertino_icons: ^1.0.8
   device_preview: ^1.2.0
   firebase_core: ^3.12.0
@@ -43,6 +46,7 @@ dependencies:
 
 dev_dependencies:
 
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -51,6 +55,12 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
+
+
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -100,6 +110,7 @@ flutter_launcher_icons:
   min_sdk_android: 21 # android min sdk min:16, default 21
 flutter_intl:
   enabled: true
+
   # flutter_assets:
   #   assets_path:
   #     - assets/icons/
@@ -108,6 +119,17 @@ flutter_intl:
   #   field_prefix: null
   #   classname: AppIcons
   #   ignore_comments: true
+
+#=============================================
+# flutter_assets:
+#    assets_path:
+#      - assets/icons/
+#    output_path: lib/core/constants/generated/
+#    filename: app_icons.dart
+#    field_prefix: null
+#    classname: AppIcons
+#    ignore_comments: true
+
   #=========================================#
   # flutter_assets:
   #   assets_path:

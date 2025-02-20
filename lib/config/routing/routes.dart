@@ -11,6 +11,7 @@ enum Routes {
   profile,
   navigation,
   products,
+  thanks,
 }
 
 extension RoutesExtension on Routes {
