@@ -32,6 +32,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.textButtonColor,
   );
+  static const moreTextStyle = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: Color(0xFF006AFF),
+  );
   static const style26W700 = TextStyle(
     fontSize: 26,
     fontWeight: FontWeight.w700,
@@ -103,6 +108,7 @@ class AppTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.w400,
   );
+
   static const style14W400B = TextStyle(
     color: AppColors.black,
     fontSize: 14,
@@ -133,9 +139,22 @@ class AppTextStyles {
     fontSize: 13,
     fontWeight: FontWeight.w400,
   );
+
   static const style16W400 = TextStyle(
     color: AppColors.subTitleColor,
     fontSize: 16,
     fontWeight: FontWeight.w400,
+  );
+
+  static const style18W600 = TextStyle(
+    color: AppColors.textColor,
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const style13W500 = TextStyle(
+    color: AppColors.textColor,
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
   );
 }
