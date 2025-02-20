@@ -16,4 +16,5 @@ class AppSizes {
   static const double spaceBtwnItems = 18.0;
 
   static const double spaceSectionItems = 14.0;
+  static const double reduis = 10.0;
 }

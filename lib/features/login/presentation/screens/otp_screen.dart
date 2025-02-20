@@ -43,16 +43,14 @@ class OtpScreen extends StatelessWidget {
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder:
-                          (context) => SuccessScreen(
-                            image: AppIcons.iconsSuccessIcon,
-                            title: 'Phone Number Verified',
-                            subtitle:
-                                'Congradulations, your phone number has been verified. You can start using the app',
-                            onPressed:
-                                () =>
-                                    context.pushAndRemoveAll(Routes.home.name),
-                          ),
+                      builder: (context) => SuccessScreen(
+                        image: AppIcons.iconsSuccessIcon,
+                        title: 'Phone Number Verified',
+                        subtitle:
+                            'Congradulations, your phone number has been verified. You can start using the app',
+                        onPressed: () =>
+                            context.pushAndRemoveAll(Routes.home.name),
+                      ),
                     ),
                     (route) => false,
                   );
@@ -84,7 +82,8 @@ class OtpScreen extends StatelessWidget {
     return AppBar(
       leading: GestureDetector(
         onTap: () => context.pop(),
-        child: SvgPicture.asset(AppIcons.arrowLeftIcon, fit: BoxFit.scaleDown),
+        child: SvgPicture.asset(AppIcons.iconsArrowLeftIcon,
+            fit: BoxFit.scaleDown),
       ),
     );
   }
