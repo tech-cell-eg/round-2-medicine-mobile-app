@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/app_strings.dart';
 import 'package:medical_store/features/product_details/data/model/product_size_model.dart';
 import 'package:medical_store/features/product_details/presentation/widgets/brand_name.dart';
@@ -24,7 +25,10 @@ class ProductDetailsBody extends StatelessWidget {
       ProductSizeModel(rs: "Rs.106", pellet: "500 pellets"),
     ];
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.symmetric(
+        vertical: 15.0,
+        horizontal: AppSizes.screenPadding,
+      ),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

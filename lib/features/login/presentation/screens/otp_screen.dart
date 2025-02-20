@@ -34,7 +34,10 @@ class OtpScreen extends StatelessWidget {
               style: AppTextStyles.style14W400,
             ),
             verticalSpace(30.0),
-            OTPInputFields(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.lg),
+              child: OTPInputFields(),
+            ),
             verticalSpace(40.0),
             SizedBox(
               width: double.infinity,

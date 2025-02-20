@@ -11,7 +11,7 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(title: "Yor Card"),
+      appBar: CustomAppbar(title: "Yor Cart"),
       body: CardBody(),
       bottomNavigationBar: CustomButton(
         onTap: () {

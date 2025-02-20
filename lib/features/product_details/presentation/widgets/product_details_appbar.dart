@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/generated/app_icons.dart';
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 
 class ProductDetailsAppbar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -17,7 +19,9 @@ class ProductDetailsAppbar extends StatelessWidget
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push(Routes.notification.name);
+          },
           icon: SvgPicture.asset(
             AppIcons.iconsNotification,
             // ignore: deprecated_member_use
@@ -26,7 +30,9 @@ class ProductDetailsAppbar extends StatelessWidget
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push(Routes.cart.name);
+          },
           icon: SvgPicture.asset(
             AppIcons.iconsCartIcon,
             // ignore: deprecated_member_use

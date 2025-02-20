@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
 import 'package:medical_store/core/constants/generated/app_images.dart';
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
 class ProductCard extends StatelessWidget {
@@ -9,7 +11,9 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        context.push(Routes.productDetails.name);
+      },
       borderRadius: BorderRadius.circular(18.0),
       child: Card(
         color: Colors.white,
@@ -27,10 +31,7 @@ class ProductCard extends StatelessWidget {
                   color: const Color(0xFFEEEEF0),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                child: Image.asset(
-                  AppImages.productImage,
-                  fit: BoxFit.contain,
-                ),
+                child: Image.asset(AppImages.productImage, fit: BoxFit.contain),
               ),
             ),
             verticalSpace(10.0),

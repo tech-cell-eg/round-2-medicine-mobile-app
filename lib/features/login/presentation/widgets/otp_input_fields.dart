@@ -9,7 +9,7 @@ class OTPInputFields extends StatefulWidget {
 }
 
 class OTPInputFieldsState extends State<OTPInputFields> {
-  final int otpLength = 6;
+  final int otpLength = 4;
   late List<TextEditingController> controllers;
   late List<FocusNode> focusNodes;
 

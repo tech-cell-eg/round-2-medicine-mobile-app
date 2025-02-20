@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/generated/app_icons.dart';
 import 'package:medical_store/core/shared/widgets/sections/section_heading.dart';
@@ -41,7 +42,11 @@ class CategoryScreen extends StatelessWidget {
                   verticalSpace(AppSizes.spaceSectionItems),
                   const SubCategoriesListView(),
                   verticalSpace(AppSizes.spaceBtwnSections),
-                  const SectionHeading(title: 'All Products', showMore: true),
+                  SectionHeading(
+                    title: 'All Products',
+                    showMore: true,
+                    onTap: () => context.push(Routes.products.name),
+                  ),
                   verticalSpace(AppSizes.spaceSectionItems),
                 ],
               ),
