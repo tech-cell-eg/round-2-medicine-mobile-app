@@ -43,6 +43,18 @@ class OtpScreen extends StatelessWidget {
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
+                      builder:
+                          (context) => SuccessScreen(
+                            image: AppIcons.iconsSuccessIcon,
+                            title: 'Phone Number Verified',
+                            subtitle:
+                                'Congradulations, your phone number has been verified. You can start using the app',
+                            onPressed:
+                                () => context.pushAndRemoveAll(
+                                  Routes.navigation.name,
+                                ),
+                          ),
+
                       builder: (context) => SuccessScreen(
                         image: AppIcons.iconsSuccessIcon,
                         title: 'Phone Number Verified',

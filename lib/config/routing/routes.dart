@@ -9,6 +9,8 @@ enum Routes {
   checkout,
   notification,
   profile,
+  navigation,
+  products,
   thanks,
 }
 

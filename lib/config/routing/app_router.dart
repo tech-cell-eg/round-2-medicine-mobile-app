@@ -6,6 +6,10 @@ import 'package:medical_store/features/category/presentation/screens/category_sc
 import 'package:medical_store/features/home/presentation/screens/home_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/login_screen.dart';
 import 'package:medical_store/features/login/presentation/screens/otp_screen.dart';
+import 'package:medical_store/features/navigation/navigation_screen.dart';
+import 'package:medical_store/features/onboarding/onboarding_screen.dart';
+import 'package:medical_store/features/products/presentation/screens/products_screen.dart';
+import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
 import 'package:medical_store/features/notification/notification_page.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
@@ -25,6 +29,9 @@ class AppRouter {
     Routes.cart.name: (_) => const Placeholder(),
     Routes.checkout.name: (_) => const Placeholder(),
     Routes.notification.name: (_) => const Placeholder(),
+    Routes.profile.name: (_) => const ProfileScreen(),
+    Routes.navigation.name: (_) => const NavigationScreen(),
+    Routes.products.name: (_) => const ProductsScreen(),
 
     // Routes.home.name: (_) => const HomeScreen(),
     Routes.categoryProducts.name: (_) => const Placeholder(),

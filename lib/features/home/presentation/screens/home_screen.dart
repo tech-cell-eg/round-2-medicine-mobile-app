@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                    bottom: AppSizes.appBarHeight + 10,
+                    bottom: AppSizes.appBarHeight + 5,
                   ),
                   child: const HomeHeaderSection(),
                 ),
