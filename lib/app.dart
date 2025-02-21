@@ -29,27 +29,24 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: AppRouter.generateRoute,
       builder: (context, child) {
         return BlocListener<ConnectivityCubit, ConnectivityState>(
-          listener: (context, state) {
+          listener: (context, state) async {
             if (state is ConnectivityDisconnected) {
-              // navigatorKey.currentState?.push(
-              //   MaterialPageRoute(builder: (_) => NoInternetScreen()),
-              // );
               if (!_isDialogOpen && navigatorKey.currentContext != null) {
+                await Future.delayed(const Duration(seconds: 2));
                 _isDialogOpen = true;
                 showDialog(
-                  context: navigatorKey.currentContext!,
+                  context:
+                      navigatorKey.currentState?.overlay?.context ?? context,
                   builder: (_) => NoInternetDialog(),
                 ).then((value) => _isDialogOpen = false);
               }
             } else if (state is ConnectivityConnected) {
+              await Future.delayed(const Duration(milliseconds: 200));
               if (_isDialogOpen &&
                   navigatorKey.currentState?.canPop() == true) {
                 navigatorKey.currentState?.pop();
                 _isDialogOpen = false;
               }
-              navigatorKey.currentState?.popUntil(
-                (route) => route.settings.name == null,
-              );
             }
           },
           child: AppFocusHandler(child: child ?? const SizedBox()),
