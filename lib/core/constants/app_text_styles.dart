@@ -157,4 +157,10 @@ class AppTextStyles {
     fontSize: 13,
     fontWeight: FontWeight.w500,
   );
+
+  static const style16W500 = TextStyle(
+    color: AppColors.subTitleColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
 }
