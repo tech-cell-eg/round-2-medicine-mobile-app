@@ -4,22 +4,18 @@ import 'package:medical_store/config/routing/app_router.dart';
 import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/bloc/connectivity/connectivity_cubit.dart';
 import 'package:medical_store/core/bloc/connectivity/connectivity_state.dart';
-import 'package:medical_store/core/shared/internet_screen/no_internet_dialog.dart';
 import 'package:medical_store/core/themes/app_theme.dart';
+import 'package:medical_store/core/utils/helpers/dialog/dialog_helper.dart';
 import 'package:medical_store/core/utils/helpers/observers/keyboard/app_focus_handler.dart';
 import 'package:medical_store/core/utils/helpers/observers/keyboard/keyboard_dismiss_observer.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  static final GlobalKey<NavigatorState> navigatorKey =
-      GlobalKey<NavigatorState>();
-
-  static bool _isDialogOpen = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorKey: navigatorKey,
+      navigatorKey: DialogHelper.navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Medical Store',
       themeMode: ThemeMode.light,
@@ -31,22 +27,9 @@ class MyApp extends StatelessWidget {
         return BlocListener<ConnectivityCubit, ConnectivityState>(
           listener: (context, state) async {
             if (state is ConnectivityDisconnected) {
-              if (!_isDialogOpen && navigatorKey.currentContext != null) {
-                await Future.delayed(const Duration(seconds: 2));
-                _isDialogOpen = true;
-                showDialog(
-                  context:
-                      navigatorKey.currentState?.overlay?.context ?? context,
-                  builder: (_) => NoInternetDialog(),
-                ).then((value) => _isDialogOpen = false);
-              }
+              await DialogHelper.showNoInternetDialog(context);
             } else if (state is ConnectivityConnected) {
-              await Future.delayed(const Duration(milliseconds: 200));
-              if (_isDialogOpen &&
-                  navigatorKey.currentState?.canPop() == true) {
-                navigatorKey.currentState?.pop();
-                _isDialogOpen = false;
-              }
+              await DialogHelper.closeNoInternetDialog(context);
             }
           },
           child: AppFocusHandler(child: child ?? const SizedBox()),
