@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medical_store/config/routing/routes.dart';
@@ -7,6 +8,7 @@ import 'package:medical_store/core/constants/generated/app_icons.dart';
 import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/extensions/screen_utils.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
+import 'package:intl_phone_field/intl_phone_field.dart' show IntlPhoneField;
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -48,11 +50,18 @@ class LoginScreen extends StatelessWidget {
               style: AppTextStyles.style16W300,
             ),
             verticalSpace(context.screenHeight * 0.05),
-            TextField(
+            IntlPhoneField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: '+201234567899',
+                hintText: 'Your number',
+                counterText: '',
               ),
+              keyboardType: TextInputType.phone,
+              initialCountryCode: 'EG',
+              onChanged: (phone) {
+                if (kDebugMode) {
+                  print(phone.completeNumber);
+                }
+              },
             ),
             verticalSpace(36),
             SizedBox(
@@ -64,6 +73,7 @@ class LoginScreen extends StatelessWidget {
                 child: Text('Continue'),
               ),
             ),
+
             verticalSpace(AppSizes.md),
           ],
         ),
