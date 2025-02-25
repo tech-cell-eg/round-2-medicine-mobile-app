@@ -15,18 +15,22 @@ class ProfileHeaderSection extends StatelessWidget {
           backgroundImage: const AssetImage(AppImages.userAvatar),
         ),
         SizedBox(width: AppSizes.lg),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              'Hi, M7H 😎',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              'Welcome to Nilkanth Medical Store',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-          ],
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'Hi, M7H 😎',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'Welcome to Nilkanth Medical Store',
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
         ),
       ],
     );
