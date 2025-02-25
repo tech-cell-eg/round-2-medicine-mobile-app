@@ -4,6 +4,7 @@ import 'package:medical_store/config/routing/routes.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
 import 'package:medical_store/core/constants/generated/app_icons.dart';
+import 'package:medical_store/core/utils/helpers/extensions/navigation_extension.dart';
 import 'package:medical_store/core/utils/helpers/extensions/screen_utils.dart';
 import 'package:medical_store/core/utils/helpers/spacing.dart';
 
@@ -44,12 +45,12 @@ class ThanksPage extends StatelessWidget {
     );
   }
 
-  SizedBox _continueButton(context) {
+  SizedBox _continueButton(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
-          context.push(Routes.home.name);
+          context.pushReplacement(Routes.home.name);
         },
         child: const Text('CONTINUE'),
       ),
