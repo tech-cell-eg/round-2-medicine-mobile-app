@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_store/features/notification/widgets/notification_component.dart';
+import 'package:medical_store/features/notification/presentation/views/widgets/notification_component.dart';
 
 class NotificationBody extends StatelessWidget {
   const NotificationBody({super.key});

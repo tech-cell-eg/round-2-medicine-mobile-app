@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medical_store/features/home/presentation/screens/home_screen.dart';
 import 'package:medical_store/features/navigation/custom_bottom_navigation_bar.dart';
 import 'package:medical_store/features/navigation/navigation_cubit.dart';
-import 'package:medical_store/features/notification/notification_page.dart';
+import 'package:medical_store/features/notification/presentation/views/pages/notification_page.dart';
 import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
 import 'package:medical_store/features/your_card/presentation/pages/cart_page.dart';
 

@@ -10,7 +10,7 @@ import 'package:medical_store/features/navigation/navigation_screen.dart';
 import 'package:medical_store/features/onboarding/onboarding_screen.dart';
 import 'package:medical_store/features/products/presentation/screens/products_screen.dart';
 import 'package:medical_store/features/profile/presentation/screens/profile_screen.dart';
-import 'package:medical_store/features/notification/notification_page.dart';
+import 'package:medical_store/features/notification/presentation/views/pages/notification_page.dart';
 import 'package:medical_store/features/product_details/presentation/product_details_page.dart';
 import 'package:medical_store/features/your_card/presentation/pages/cart_page.dart';
 import 'package:medical_store/features/your_card/presentation/pages/checkout_page.dart';

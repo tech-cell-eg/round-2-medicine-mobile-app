@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medical_store/features/notification/widgets/notification_appbar.dart';
-import 'package:medical_store/features/notification/widgets/notification_body.dart';
+import 'package:medical_store/features/notification/presentation/views/widgets/notification_appbar.dart';
+import 'package:medical_store/features/notification/presentation/views/widgets/notification_body.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
