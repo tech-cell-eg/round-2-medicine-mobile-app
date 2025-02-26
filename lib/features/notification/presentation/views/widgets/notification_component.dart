@@ -26,14 +26,8 @@ class NotificationComponent extends StatelessWidget {
             // ignore: deprecated_member_use
             color: Colors.black,
           ),
-          title: Text(
-            'No notifications adsfas fasd fasd as ffd  asf asaa sfd',
-            style: AppTextStyles.style14W400B,
-          ),
-          subtitle: Text(
-            'Aug 12, 2020 at 12:08 PM',
-            style: AppTextStyles.style13W400,
-          ),
+          title: Text(title, style: AppTextStyles.style14W400B),
+          subtitle: Text(date, style: AppTextStyles.style13W400),
         ),
       ],
     );

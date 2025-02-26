@@ -1,19 +1,22 @@
 import 'dart:convert';
 
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'package:medical_store/core/constants/end_points.dart';
 import 'package:medical_store/features/product_details/data/model/product_details_model.dart';
 
 class ProductDetailesSer {
-  http.Client? client;
+  Dio? dio;
+
   ProductDetailesSer() {
-    client = http.Client();
+    dio = Dio(
+      BaseOptions(baseUrl: EndPoints.baseUrl, responseType: ResponseType.json),
+    );
   }
 
   Future<ProductDetailsModel> getProductDetails(int id) async {
-    final response = await client!.get(
-      Uri.parse("${EndPoints.baseUrl}${EndPoints.products}/$id"),
-    );
-    return ProductDetailsModel.fromJson(jsonDecode(response.body)['data']);
+    final response = await dio!.get("${EndPoints.products}/$id");
+    dynamic data = response.data;
+    data = jsonDecode(data);
+    return ProductDetailsModel.fromJson(data['data'] as Map<String, dynamic>);
   }
 }
