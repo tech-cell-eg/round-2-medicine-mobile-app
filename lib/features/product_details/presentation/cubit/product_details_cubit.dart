@@ -9,10 +9,10 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   ProductDetailsCubit(this.productDetailesRepo)
     : super(ProductDetailsInitial());
   final ProductDetailsRepo productDetailesRepo;
-  Future<void> getProductDetails() async {
+  Future<void> getProductDetails(int id) async {
     emit(ProductDetailsLoading());
 
-    final response = await productDetailesRepo.getProductDetails();
+    final response = await productDetailesRepo.getProductDetails(id);
     response.fold(
       (l) => emit(ProductDetailsError(l.errMessage)),
       (r) => emit(ProductDetailsLoaded(r)),

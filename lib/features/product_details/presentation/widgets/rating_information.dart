@@ -4,8 +4,14 @@ import 'package:medical_store/core/constants/app_text_styles.dart';
 import 'package:medical_store/features/product_details/presentation/widgets/ratings.dart';
 
 class RatingInformation extends StatelessWidget {
-  const RatingInformation({super.key});
-
+  const RatingInformation({
+    super.key,
+    required this.rating,
+    required this.ratingCount,
+    required this.reviewCount,
+  });
+  final String rating;
+  final int ratingCount, reviewCount;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,13 +25,13 @@ class RatingInformation extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("4.5", style: AppTextStyles.style33W600),
+                    Text(rating, style: AppTextStyles.style33W600),
                     SizedBox(width: 18),
                     Icon(Icons.star, color: AppColors.starColor, size: 26),
                   ],
                 ),
                 Text(
-                  "455 Rating and 257 Reviews",
+                  "$ratingCount Rating and $reviewCount Reviews",
                   style: AppTextStyles.style14W400,
                 ),
               ],

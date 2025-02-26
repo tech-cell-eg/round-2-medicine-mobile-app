@@ -4,4 +4,6 @@ class ProductSizeModel {
   ProductSizeModel({required this.rs, required this.pellet});
   factory ProductSizeModel.fromJson(Map<String, dynamic> json) =>
       ProductSizeModel(rs: json['rs'], pellet: json['pellet']);
+
+  Map<String, dynamic> toJson() => {'rs': rs, 'pellet': pellet};
 }

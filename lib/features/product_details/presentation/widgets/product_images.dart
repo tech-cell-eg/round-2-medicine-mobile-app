@@ -34,9 +34,9 @@ class _ProductImagesState extends State<ProductImages> {
           child: ConstrainedBox(
             constraints: BoxConstraints(maxHeight: 200),
             child: PageView.builder(
-              itemBuilder: (context, index) => CachedNetworkImage(
-                imageUrl: AppStrings.productUrl,
-              ),
+              itemBuilder:
+                  (context, index) =>
+                      CachedNetworkImage(imageUrl: AppStrings.productImage),
               itemCount: widget.images.length,
               onPageChanged: (index) {
                 // Update the current page index when the page changes
@@ -51,19 +51,21 @@ class _ProductImagesState extends State<ProductImages> {
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: widget.images.asMap().entries.map((entry) {
-            int index = entry.key;
-            return Padding(
-              padding: const EdgeInsets.only(right: 3.0),
-              child: Icon(
-                Icons.circle,
-                size: 8,
-                color: _currentPageIndex == index
-                    ? AppColors.primaryColor
-                    : Colors.grey,
-              ),
-            );
-          }).toList(),
+          children:
+              widget.images.asMap().entries.map((entry) {
+                int index = entry.key;
+                return Padding(
+                  padding: const EdgeInsets.only(right: 3.0),
+                  child: Icon(
+                    Icons.circle,
+                    size: 8,
+                    color:
+                        _currentPageIndex == index
+                            ? AppColors.primaryColor
+                            : Colors.grey,
+                  ),
+                );
+              }).toList(),
         ),
       ],
     );

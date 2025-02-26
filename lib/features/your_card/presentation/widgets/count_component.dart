@@ -23,9 +23,9 @@ class _CountComponentState extends State<CountComponent> {
         children: [
           GestureDetector(
             onTap: () {
-              setState(() {
-                widget.count(_count--);
-              });
+              if (_count == 0) return;
+              widget.count(_count--);
+              setState(() {});
             },
             child: CircleAvatar(
               backgroundColor: AppColors.colorDF,
@@ -45,7 +45,7 @@ class _CountComponentState extends State<CountComponent> {
             child: CircleAvatar(
               backgroundColor: AppColors.colorA0,
               radius: 16,
-              child: Icon(Icons.remove, color: Colors.white, size: 15),
+              child: Icon(Icons.add, color: Colors.white, size: 15),
             ),
           ),
         ],

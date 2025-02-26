@@ -1,14 +1,19 @@
-import 'package:dio/dio.dart';
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+import 'package:medical_store/core/constants/end_points.dart';
 import 'package:medical_store/features/product_details/data/model/product_details_model.dart';
 
 class ProductDetailesSer {
-  Dio? dio;
+  http.Client? client;
   ProductDetailesSer() {
-    dio = Dio();
+    client = http.Client();
   }
 
-  Future<ProductDetailsModel> getProductDetails() async {
-    final response = await dio!.get('https://fakestoreapi.com/products/1');
-    return ProductDetailsModel.fromJson(response.data);
+  Future<ProductDetailsModel> getProductDetails(int id) async {
+    final response = await client!.get(
+      Uri.parse("${EndPoints.baseUrl}${EndPoints.products}/$id"),
+    );
+    return ProductDetailsModel.fromJson(jsonDecode(response.body)['data']);
   }
 }

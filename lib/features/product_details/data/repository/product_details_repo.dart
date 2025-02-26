@@ -8,9 +8,9 @@ class ProductDetailsRepo {
   ProductDetailsRepo(this.productDetailesSer);
   final ProductDetailesSer productDetailesSer;
 
-  Future<Either<Failure, ProductDetailsModel>> getProductDetails() async {
+  Future<Either<Failure, ProductDetailsModel>> getProductDetails(int id) async {
     try {
-      return Right(await productDetailesSer.getProductDetails());
+      return Right(await productDetailesSer.getProductDetails(id));
     } catch (e) {
       return Left(ServerFailure(e.toString()));
     }

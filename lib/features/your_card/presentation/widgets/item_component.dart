@@ -19,7 +19,7 @@ class ItemComponent extends StatelessWidget {
         Row(
           children: [
             CachedNetworkImage(
-              imageUrl: AppStrings.productUrl,
+              imageUrl: AppStrings.productImage,
               width: 70,
               height: 80,
             ),
