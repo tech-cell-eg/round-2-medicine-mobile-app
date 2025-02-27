@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:medical_store/core/constants/app_colors.dart';
-import 'package:medical_store/core/constants/app_strings.dart';
 import 'package:medical_store/core/constants/app_text_styles.dart';
+import 'package:medical_store/features/product_details/data/model/comment_model.dart';
 
 class ReviewSection extends StatelessWidget {
-  const ReviewSection({super.key});
-
+  const ReviewSection({super.key, required this.commentModel});
+  final CommentModel commentModel;
   @override
   Widget build(BuildContext context) {
+    //formate date
+    DateTime dateTime = DateTime.parse(commentModel.date);
+    final DateFormat formatter = DateFormat('dd-MMM-yyyy', 'en_US');
+    String formattedDate = formatter.format(dateTime);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -15,14 +20,14 @@ class ReviewSection extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.star, color: AppColors.starColor, size: 16),
-            Text("4.5", style: AppTextStyles.style14W400),
+            Text(commentModel.rating, style: AppTextStyles.style14W400),
             Spacer(),
-            Text("05- oct 2020", style: AppTextStyles.style14W400),
+            Text(formattedDate, style: AppTextStyles.style14W400),
           ],
         ),
-        Text("Erric Hoffman", style: AppTextStyles.style14W400B),
+        Text(commentModel.name, style: AppTextStyles.style14W400B),
         SizedBox(height: 8),
-        Text(AppStrings.comment, style: AppTextStyles.style14W400),
+        Text(commentModel.comment, style: AppTextStyles.style14W400),
       ],
     );
   }

@@ -16,29 +16,31 @@ class OfferComponent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             RichText(
-              text: TextSpan(children: [
-                TextSpan(text: preRs, style: AppTextStyles.style18W700line),
-                TextSpan(text: postRs, style: AppTextStyles.style18W700)
-              ]),
+              text: TextSpan(
+                children: [
+                  TextSpan(text: preRs, style: AppTextStyles.style18W700line),
+                  TextSpan(text: postRs, style: AppTextStyles.style18W700),
+                ],
+              ),
             ),
             SizedBox(height: 4),
-            Text("Etiam mollis ", style: AppTextStyles.style14W400)
+            Text("Etiam mollis ", style: AppTextStyles.style14W400),
           ],
         ),
         Spacer(),
-        Row(
-          children: [
-            SvgPicture.asset(
-              AppIcons.iconsAdd,
-              color: AppColors.primaryColor,
-            ),
-            SizedBox(width: 10),
-            Text(
-              "Add to cart",
-              style: AppTextStyles.style14W400brime,
-            )
-          ],
-        )
+        GestureDetector(
+          onTap: () {},
+          child: Row(
+            children: [
+              SvgPicture.asset(
+                AppIcons.iconsAdd,
+                color: AppColors.primaryColor,
+              ),
+              SizedBox(width: 10),
+              Text("Add to cart", style: AppTextStyles.style14W400brime),
+            ],
+          ),
+        ),
       ],
     );
   }

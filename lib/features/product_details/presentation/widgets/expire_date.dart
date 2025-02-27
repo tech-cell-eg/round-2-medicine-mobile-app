@@ -11,7 +11,7 @@ class ExpireDate extends StatelessWidget {
         SizedBox(height: 8),
         Row(
           children: [
-            Text("Expire Date", style: AppTextStyles.style16W600),
+            Text("Expire Date: ", style: AppTextStyles.style16W600),
             Text(expireDate, style: AppTextStyles.style14W300),
           ],
         ),

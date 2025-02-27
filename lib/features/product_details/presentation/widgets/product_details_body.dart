@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medical_store/core/constants/app_sizes.dart';
-import 'package:medical_store/core/constants/app_strings.dart';
 import 'package:medical_store/features/product_details/data/model/product_size_model.dart';
 import 'package:medical_store/features/product_details/presentation/cubit/product_details_cubit.dart';
 import 'package:medical_store/features/product_details/presentation/widgets/brand_name.dart';
@@ -71,7 +70,12 @@ class ProductDetailsBody extends StatelessWidget {
                     ratingCount: state.productDetailsModel.ratingCount,
                     reviewCount: state.productDetailsModel.reviewCount,
                   ),
-                  ReviewSection(),
+                  Column(
+                    children:
+                        state.productDetailsModel.comments
+                            .map((e) => ReviewSection(commentModel: e))
+                            .toList(),
+                  ),
                 ],
               ),
             );

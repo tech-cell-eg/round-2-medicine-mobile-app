@@ -1,3 +1,6 @@
+import 'package:medical_store/features/product_details/data/model/comment_model.dart';
+import 'package:medical_store/features/product_details/data/model/product_size_model.dart';
+
 class ProductDetailsModel {
   final int id;
   final String name;
@@ -9,7 +12,8 @@ class ProductDetailsModel {
   final String brandName;
   final double rating;
   final double oldPrice;
-  //final List<ProductSizeModel> sizes;
+  final List<ProductSizeModel> sizes;
+  final List<CommentModel> comments;
   final int ratingCount;
   final int reviewCount;
   final String image;
@@ -19,6 +23,7 @@ class ProductDetailsModel {
 
   ProductDetailsModel({
     required this.id,
+    required this.comments,
     required this.name,
     required this.description,
     required this.price,
@@ -28,7 +33,7 @@ class ProductDetailsModel {
     required this.brandName,
     required this.rating,
     required this.oldPrice,
-    // required this.sizes,
+    required this.sizes,
     required this.ratingCount,
     required this.reviewCount,
     required this.image,
@@ -50,11 +55,16 @@ class ProductDetailsModel {
       brandName: json['brand_name'] ?? '',
       rating: double.tryParse(json['rating'].toString()) ?? 0.0,
       oldPrice: (json['old_price'] ?? 0).toDouble(),
-      // sizes:
-      //     (json['sizes'] as List<dynamic>?)
-      //         ?.map((e) => ProductSizeModel.fromJson(e as Map<String, dynamic>))
-      //         .toList() ??
-      //     [],
+      sizes:
+          (json['sizes'] as List<dynamic>?)
+              ?.map((e) => ProductSizeModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      comments:
+          (json['comments'] as List<dynamic>?)
+              ?.map((e) => CommentModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
       ratingCount: json['rating_count'] ?? 0,
       reviewCount: json['review_count'] ?? 0,
       image: json['image'] ?? '',

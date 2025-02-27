@@ -11,9 +11,9 @@ class CommentModel {
     required this.rating,
   });
   factory CommentModel.fromJson(Map<String, dynamic> json) => CommentModel(
-    name: json['name'] as String,
+    name: json['user_name'] as String,
     comment: json['comment'] as String,
-    date: json['date'] as String,
+    date: json['created_at'] as String,
     rating: json['rating'] as String,
   );
 }

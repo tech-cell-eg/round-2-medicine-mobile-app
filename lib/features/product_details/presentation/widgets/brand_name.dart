@@ -11,7 +11,7 @@ class BrandName extends StatelessWidget {
         SizedBox(height: 8),
         Row(
           children: [
-            Text("Brand Name", style: AppTextStyles.style16W600),
+            Text("Brand Name: ", style: AppTextStyles.style16W600),
             Text(brandName, style: AppTextStyles.style14W300),
           ],
         ),
