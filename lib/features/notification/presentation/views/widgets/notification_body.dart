@@ -13,8 +13,7 @@ class NotificationBody extends StatelessWidget {
         if (state is NotificationLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state is NotificationLoaded) {
-          return ListView.separated(
-            separatorBuilder: (context, index) => const Divider(),
+          return ListView.builder(
             itemCount: state.notifications.length,
             itemBuilder: (context, index) {
               return NotificationComponent(

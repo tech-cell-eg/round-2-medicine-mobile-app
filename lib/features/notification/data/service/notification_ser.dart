@@ -15,8 +15,11 @@ class NotificationSer {
     final response = await dio!.get(EndPoints.notifications);
     dynamic data = response.data;
     data = jsonDecode(data);
-    return (data['data'] as List)
-        .map((e) => NotificationModel.fromJson(e as Map<String, dynamic>))
-        .toList();
+    List<NotificationModel> notifications =
+        (data['data'] as List)
+            .map((e) => NotificationModel.fromJson(e as Map<String, dynamic>))
+            .toList();
+
+    return notifications;
   }
 }

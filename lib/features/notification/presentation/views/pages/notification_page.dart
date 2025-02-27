@@ -15,7 +15,9 @@ class NotificationPage extends StatelessWidget {
       appBar: NotificationAppbar(),
       body: BlocProvider(
         create:
-            (context) => NotificationCubit(NotificationRepo(NotificationSer())),
+            (context) =>
+                NotificationCubit(NotificationRepo(NotificationSer()))
+                  ..getNotification(),
         child: NotificationBody(),
       ),
     );
